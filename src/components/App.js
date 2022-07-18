@@ -1,8 +1,11 @@
 import React from 'react';
 import '../stylesheets/App.css';
 
-function App() {
-  return <div></div>;
+const App = () => {
+  return (
+    <h1>HooksApp</h1>
+  )
+
 }
 
 export default App;
