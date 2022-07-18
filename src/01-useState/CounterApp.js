@@ -5,11 +5,12 @@ function CounterApp() {
 
     // State
 
-    const [{ counter1, counter2, counter3 }, setCounter] = useState({
+    const [state, setCounter] = useState({
         counter1: 10,
         counter2: 20,
         counter3: 30,
     });
+    const { counter1, counter2, counter3 } = state;
 
     console.log(counter1);
     console.log(counter2);
@@ -26,9 +27,9 @@ function CounterApp() {
 
             <button className='btn' onClick={
                 () => setCounter({
+                    ...state,
                     counter1: counter1 + 1,
-                    counter2: counter2,
-                    counter3: counter3,
+
                 })
             }>+1</button>
 
