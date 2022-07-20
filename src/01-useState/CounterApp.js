@@ -11,11 +11,6 @@ const CounterApp = () => {
     });
     const { counter1, counter2, counter3 } = state;
 
-    console.log(counter1);
-    console.log(counter2);
-    console.log(counter3);
-
-
     return (
         <>
             <h1>Counter: {counter1}</h1>
