@@ -1,10 +1,9 @@
 import { useState } from 'react'
 
-function CounterApp() {
 
+const CounterApp = () => {
 
     // State
-
     const [state, setCounter] = useState({
         counter1: 10,
         counter2: 20,
