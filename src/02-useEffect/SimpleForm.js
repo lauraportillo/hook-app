@@ -21,6 +21,30 @@ const SimpleForm = () => {
 
     }
 
+    // useEffect se usa para disparar efectos secundarios
+    // normalmente los hooks van arriba, pero los efectos se puden colocar abajo
+    // [] un arreglo vacío significa que quiero que se EJECUTE UNA SOLA VEZ
+    // Si quiero que se ejecute cada vez que el formulario cambia: 
+    // SE RECOMIENDA EFECTOS ESPECÍFICOS POR CADA ACIIÓN QUE QUERAMOS EJECUTAR
+
+    useEffect(() => {
+        console.log('useEffect called');
+    }, [])
+
+    useEffect(() => {
+        console.log('formState changed!');
+    }, [formState])
+
+    useEffect(() => {
+        console.log('emails changed!');
+    }, [email])
+
+
+
+
+
+
+
     return (
         <>
             <h1>Simple Form</h1>
