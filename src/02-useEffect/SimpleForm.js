@@ -5,8 +5,21 @@ const SimpleForm = () => {
     const [formState, setFormState] = useState({
         username: 'laura',
         email: 'laura@google.com'
-
     })
+
+    // desestructurar el estado:
+    const { username, email } = formState;
+
+    // función que maneja los cambios en los inputs:
+    // propiedades computadas de los objetos en javascript [name]: value
+    const handleInput = ({ target }) => {
+        const { name, value } = target;
+        setFormState({
+            ...formState,
+            [name]: value
+        })
+
+    }
 
     return (
         <>
@@ -18,6 +31,8 @@ const SimpleForm = () => {
                 className="form-control"
                 placeholder="Username"
                 name="username"
+                value={username}
+                onChange={handleInput} 
             />
 
             <input
@@ -25,6 +40,8 @@ const SimpleForm = () => {
                 className="form-control mt-2"
                 placeholder="laura@google.com"
                 name="email"
+                value={email}
+                onChange={handleInput} 
             />
         </>
 
