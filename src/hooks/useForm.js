@@ -1,3 +1,4 @@
+//React
 import { useState } from "react"
 
 
@@ -13,7 +14,7 @@ export const useForm = (initialForm = {}) => {
         })
     }
 
-    const handleReset = () => {
+    const handleResetForm = () => {
         setFormState(initialForm)
     }
 
@@ -21,7 +22,7 @@ export const useForm = (initialForm = {}) => {
         ...formState,
         formState,
         handleInput,
-        handleReset
+        handleResetForm
     }
 
 }
