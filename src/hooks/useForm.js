@@ -13,10 +13,15 @@ export const useForm = (initialForm = {}) => {
         })
     }
 
+    const handleReset = () => {
+        setFormState(initialForm)
+    }
+
     return {
         ...formState,
         formState,
-        handleInput
+        handleInput,
+        handleReset
     }
 
 }
