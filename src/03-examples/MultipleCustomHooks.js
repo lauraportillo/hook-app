@@ -17,7 +17,7 @@ const MultipleCustomHooks = () => {
             <h1>Breaking Bad Quotes</h1>
             <hr />
 
-            {isLoading ? (<LoadingQuote />) : (<Quote quote={quote} author={author} />)}
+            {isLoading ? <LoadingQuote /> : <Quote quote={quote} author={author} />}
 
             <button
                 onClick={() => increment(1)}
