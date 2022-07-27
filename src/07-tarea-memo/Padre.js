@@ -9,15 +9,10 @@ export const Padre = () => {
 
     const incrementar = useCallback(
         (num) => {
-            setValor((valor) => valor + num);
+            setValor((oldValue) => oldValue + num);
         },
         [],
-    )
-
-    // const incrementar = (num) => {
-    //     setValor(valor + num)
-    // }
-
+    );
 
     return (
         <div>
@@ -35,7 +30,7 @@ export const Padre = () => {
                     />
                 ))
             }
-            {/* <Hijo /> */}
+
         </div>
     )
 }
