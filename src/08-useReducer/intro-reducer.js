@@ -1,3 +1,4 @@
+// useReducer es un alternativa al useState
 
 // 1. TENEMOS UN ESTADO INICIAL
 const initialState = [{
