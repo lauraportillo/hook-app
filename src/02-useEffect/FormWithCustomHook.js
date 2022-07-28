@@ -4,7 +4,7 @@ import { useForm } from "../hooks/useForm";
 
 const FormWithCustomHook = () => {
 
-    const { formState, handleInput, handleResetForm, username, email, password } = useForm({
+    const { formState, onInputChange, onResetForm, username, email, password } = useForm({
         username: '',
         email: '',
         password: ''
@@ -21,7 +21,7 @@ const FormWithCustomHook = () => {
                 placeholder="Username"
                 name="username"
                 value={username}
-                onChange={handleInput}
+                onChange={onInputChange}
             />
 
             <input
@@ -30,7 +30,7 @@ const FormWithCustomHook = () => {
                 placeholder="laura@google.com"
                 name="email"
                 value={email}
-                onChange={handleInput}
+                onChange={onInputChange}
             />
 
             <input
@@ -39,10 +39,10 @@ const FormWithCustomHook = () => {
                 placeholder="Password"
                 name="password"
                 value={password}
-                onChange={handleInput}
+                onChange={onInputChange}
             />
 
-            <button onClick={handleResetForm} className="btn btn-primary mt-2">Reset</button>
+            <button onClick={onResetForm} className="btn btn-primary mt-2">Reset</button>
 
         </>
 

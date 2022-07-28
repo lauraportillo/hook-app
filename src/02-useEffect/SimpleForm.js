@@ -15,7 +15,7 @@ const SimpleForm = () => {
 
     // función que maneja los cambios en los inputs:
     // propiedades computadas de los objetos en javascript [name]: value
-    const handleInput = ({ target }) => {
+    const onInputChange = ({ target }) => {
         const { name, value } = target;
         setFormState({
             ...formState,
@@ -53,7 +53,7 @@ const SimpleForm = () => {
                 placeholder="Username"
                 name="username"
                 value={username}
-                onChange={handleInput} 
+                onChange={onInputChange} 
             />
 
             <input
@@ -62,7 +62,7 @@ const SimpleForm = () => {
                 placeholder="laura@google.com"
                 name="email"
                 value={email}
-                onChange={handleInput} 
+                onChange={onInputChange} 
             />
 
             {

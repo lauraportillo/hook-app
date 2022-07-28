@@ -3,7 +3,7 @@ import { useForm } from "../hooks/useForm";
 
 const TodoAdd = ({ onNewTodo }) => {
 
-    const { description, handleInput, handleResetForm } = useForm({
+    const { description, onInputChange, onResetForm } = useForm({
         description: ''
     });
 
@@ -18,7 +18,7 @@ const TodoAdd = ({ onNewTodo }) => {
         }
 
         onNewTodo(newTodo);
-        handleResetForm();
+        onResetForm();
 
     }
 
@@ -31,7 +31,7 @@ const TodoAdd = ({ onNewTodo }) => {
                 className='form-control'
                 name='description'
                 value={description}
-                onChange={handleInput}
+                onChange={onInputChange}
 
             />
             <button
